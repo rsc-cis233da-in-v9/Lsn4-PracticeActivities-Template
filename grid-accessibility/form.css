@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+/* This file is used to style the form for the accessibility activity */
+/* The styles create a bad accessibility experience for keyboard users.
+You will need to review the styles and make changes */
+
+/* Form styles */
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 20ch 1fr);
+  grid-auto-rows: max-content;
+  gap: .5em;
+  padding: 1em;
+  border-radius: .5em;
+  border-style: solid;
+  border-width: 1px 6px;
+  border-color: var(--main-color-800);
+  box-shadow: 2px 2px 5px var(--shadow-color-600);
+  background-color: whitesmoke;
+  margin: 1em;
+}
+legend {
+  margin-left: .5em;
+  padding: 0 .5em;
+  font-weight: 700;
+  border-left: 3px solid var(--main-color-800);
+  border-radius: .5em;
+  background-color: var(--main-color-200);
+}
+label {
+  justify-self: end;
+  font-weight: bolder;
+  grid-column: 1;
+}
+label, input {
+  margin: .5em 0;
+}
+input {
+  grid-column: 2;
+}
+label.group-right {
+  grid-column: 3;
+}
+input.group-right {
+  grid-column: 4;
+}
+.state {
+  grid-row: 2;
+}
+.ccv {
+  grid-row: 1;
+}
+.expire {
+  grid-row: 2;
+}
+.phone {
+  grid-row: 3;
+}
+.email {
+  grid-row: 4;
+}
+button {
+  padding: .5em 1em;
+  margin: .5em;
+  background-color: var(--main-color-800);
+  border: 1px solid var(--accent-color-400);
+  color: var(--main-color-200);
+}
+button:hover, button:focus {
+  background-color: var(--main-color-300);
+  color: var(--main-color-800);
+  border-color: var(--main-color-800);
+}
+button[type="reset"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+button[type="submit"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+/* End Form styles */
